@@ -45,7 +45,7 @@ This repository is a comprehensive exploration of Redis, focusing on understandi
 2. **Set up Redis server using Docker:**
    ```bash
    docker pull redis/redis-stack-server:latest
-   docker run -d --name redis-stack-server -p 6379:6379 redis/redis-stack-server:latest
+   docker run -d --name redis-stack-server -p 6379:6379 -p 8001:8001 redis/redis-stack-server:latest
    ```
 
 3. **Verify the installation:**
@@ -61,6 +61,10 @@ This repository is a comprehensive exploration of Redis, focusing on understandi
    redis-cli ping
    ```
    - If you receive `PONG`, Redis is running correctly.
+
+5. **Access Redis Portal:**
+   - Open your web browser and navigate to `http://localhost:8001`
+   - This will open the Redis Portal, where you can view and manage your Redis data visually.
 
 ### Running the Code
 
